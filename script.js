@@ -25,6 +25,8 @@ console.log(firstName, lastName, dob)
 
 
 
+
+
 const a = {
     fistName: "Gaurav",
     lastName: "Shreenet",
@@ -34,3 +36,35 @@ const b = a;
 a.lastName = "smith";
 
 console.log(a, b);
+
+
+const pet = "cow"
+// if (pet === "cat") {
+//     console.log("meow")
+// }
+// else if (pet === "dog") {
+//     console.log("bark")
+// }
+// else if (pet === "cow") {
+//     console.log("Moo")
+// }else{
+//     console.log("no animal detected")
+// }
+
+switch (pet) {
+    case "cat":
+        console.log("meow");
+        break;
+
+        case "dog":
+        console.log("bark");
+        break;
+
+        case "cow":
+        console.log("moo");
+        break;
+
+    default:
+        console.log("no animal detected");
+        break;
+}
