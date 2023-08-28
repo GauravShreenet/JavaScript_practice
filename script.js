@@ -125,9 +125,53 @@
 //     return a + b;
 // }
 
-let add = (a, b) => a + b
+// let add = (a, b) => a + b
 
-const ans = add(4234574, 1000);
-const ans2 = add(44, 533);
-const ans3 = add(34, 5);
-console.log(ans, ans2, ans3);
+// const ans = add(4234574, 1000);
+// const ans2 = add(44, 533);
+// const ans3 = add(34, 5);
+// console.log(ans, ans2, ans3);
+
+// Loops
+
+// for loops
+// let string = "";
+// for(i=1; i <= 5; i++){
+//     for(j=0; j < i; j++){
+//         string += "*";
+//     }
+//     string += "\n";
+// }
+// console.log(string);
+
+// let i = 0;
+// while (i < 10) {
+//     console.log(i);
+//     i++;
+// }
+// i%2
+// i%2===0
+/// continue, in loop to ext 1 loop
+
+// let i = 0;
+// let j = 1;
+// let num;
+// let number;
+// while (i <= 10) {
+//     num = i
+//     i = i+2;
+//     console.log(`this is even ${num}`)
+//     while (j < i) {
+//         number = j;
+//         console.log(`this is odd ${number}`)
+//         j = j + 2;
+        
+//     }
+// }
+
+const num = "045678976s";
+// const val = Number(num);
+
+const val = parseInt(num)
+
+console.log(typeof val, val);
