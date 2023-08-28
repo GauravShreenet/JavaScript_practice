@@ -64,7 +64,21 @@ switch (pet) {
         console.log("moo");
         break;
 
-    default:
+        // case "":
+        // console.log("");
+ 
+        default:
         console.log("no animal detected");
         break;
+}
+
+
+try {
+    //code
+    console.log(first);
+}catch (error) {
+    //what you want to do when there is an error
+    console.log(error.message);
+}finally {
+   console.log("this code was executed at " + Date.now());
 }
