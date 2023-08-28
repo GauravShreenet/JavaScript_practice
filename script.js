@@ -101,9 +101,33 @@
 // JS - ES6
 // Template literals
 
-const a = 5;
-const b = 6;
-const str = `when we add  ${a} and ${b} the total would be ${a+b}`;
+// const a = 5;
+// const b = 6;
+// const str = `when we add  ${a} and ${b} the total would be ${a+b}`;
 
-console.log(str);
+// console.log(str);
 
+
+// Arrow function
+// function add() {
+//     console.log("from add funciton")
+// }
+
+// add();
+
+// let add = (a, b) => {
+//     const total = a + b;
+//     return total;
+// }
+
+// let add = (a, b) => {
+    
+//     return a + b;
+// }
+
+let add = (a, b) => a + b
+
+const ans = add(4234574, 1000);
+const ans2 = add(44, 533);
+const ans3 = add(34, 5);
+console.log(ans, ans2, ans3);
