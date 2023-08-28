@@ -82,3 +82,18 @@ try {
 }finally {
    console.log("this code was executed at " + Date.now());
 }
+
+setTimeout (() => {
+    console.log("i am from settimeout")
+}, 3000);
+
+let i = 0
+const counter = setInterval (() => {
+console.log("it is " + i++);
+
+if (i === 10) {
+    clearInterval(counter);
+    console.log("it stopped");
+}
+}, 1000)
+
