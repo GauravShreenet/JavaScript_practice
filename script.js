@@ -255,12 +255,192 @@ const fruits = ["banana", "apple", "orange", "mango"];
 
 // // 1,3,4,11,6,5,2
 
-let uniquesRandom = [];
-for (let i = 0; i < 50; i++) {
-    const n = Math.floor(Math.random()*100) + 1;
-    if (!uniquesRandom.includes(n)){
-        uniquesRandom.push(n);
-    }
+// let uniquesRandom = [];
+// for (let i = 0; i < 50; i++) {
+//     const n = Math.floor(Math.random()*100) + 1;
+//     if (!uniquesRandom.includes(n)){
+//         uniquesRandom.push(n);
+//     }
     
+// }
+// console.log(uniquesRandom.sort());
+
+
+// const person = {
+//     _fName: "Gaurav",
+//     _lname: "Shreenet",
+//     _address: "Sydney",
+//     lazy: false,
+//     number: 614332834,
+//     skills: ['java', 'js', 'react'],
+    
+// }
+
+// console.log(person._fName);
+// person.number = "736353";
+
+// console.log(person);
+// delete person.parent;
+// for(let key in person) {
+//     console.log(person[key]);
+// }
+// const p = Object.entries(person);
+// const p = Object.keys(person);
+// const p = Object.values(person);
+// console.log(p);
+
+// Destruction
+// Default + Rest + Spread
+
+// console.log(person);
+// const { _fname, _address } = person;
+
+// console.log(_fname, _address);
+
+// const bio = ( {name = "NA", add}) => {
+//     const str = `hi there my name is ${name}
+//     and i live in ${add}`
+
+//     return str;
+// };
+
+// const sam = {
+//     name: "sam",
+//     add: "AU",
+// };
+
+// const prem = {
+//     name: "prem",
+//     add: "AU",
+// };
+// const data = bio(sam);
+// console.log(data);
+
+// const p = {
+//     name: 'sam',
+//     add: 'sydney',
+//     g: {
+//         sex: "male",
+//     }
+// }
+
+// const career = {
+//     education: "MSCS",
+//     year: 2012
+// }
+
+// const samobj = Object.assign({}, p, career);
+// p.name = "harry";
+
+// // const samobj = {
+// //     ...p,
+// //     ...career,
+// // }
+// console.log(samobj);
+
+// const { name, ...rest } = samobj;
+// console.log(samobj, name, rest);
+
+// const a = ["a", 22, true];
+// const b = ["b", 34, false];
+
+// const c = Object.assign([], (a, b));
+// console.log(c);
+
+// ======== date
+
+// const today = Date();
+// const today = Date.now();
+// console.log(typeof today, today);
+
+
+// const today = new Date('2023-08-29');
+
+// // const data = today.toLocaleTimeString();
+// // const data = today.get();
+
+// today.setDate(today.getDate() + 5);
+// console.log(today);
+
+// #1: Create a function that takes foods and the expires data and returns one of the followings:
+// 1. if expired: AB is expired 4 days ago.
+// 2. if not expired: you have 10 days to use this product.
+
+const food1 = {
+    name: "Beef",
+    expireDate: "2023-09-15"
 }
-console.log(uniquesRandom.sort());
+
+const food2 = {
+    name: "Milk",
+    expireDate: "2023-08-25"
+}
+
+const date1 = new Date(food1.expireDate).getTime();
+const date2 = new Date(food2.expireDate).getTime();
+const obj = new Date().getTime();
+
+const check = () => {     
+    const data1 = date1 - obj;
+    const data2 = date2 - obj;
+
+    const days1 = Math.floor(data1/(1000*60*60*24));
+    const days2 = Math.floor(data2/(1000*60*60*24));
+
+    // console.log(days1);
+    // console.log(days2); 
+
+    return [days1, days2];
+}
+
+const [days1, days2] = check();
+
+if (date1 < obj){
+    console.log(`${food1.name} is expired ${-days1} days ago`);
+}else{
+    console.log(`You have ${days1} days ti use this product.`)
+}
+if (date2 < obj){
+    console.log(`${food2.name} is expired ${-days2} days ago`);
+} else {
+    console.log(`You have ${days2} days to use this product.`);
+}
+
+
+// const food1 = {
+//     name: "Beef",
+//     expireDate: "2023-09-15"
+// }
+
+// const food2 = {
+//     name: "Milk",
+//     expireDate: "2023-08-25"
+// }
+
+// const date1 = new Date(food1.expireDate).getTime();
+// const date2 = new Date(food2.expireDate).getTime();
+// const obj = new Date().getTime();
+
+// const check = () => {     
+//     const data1 = date1 - obj;
+//     const data2 = date2 - obj;
+
+//     const days1 = Math.floor(data1 / (1000 * 60 * 60 * 24));
+//     const days2 = Math.floor(data2 / (1000 * 60 * 60 * 24));
+
+//     return [days1, days2];
+// }
+
+// const [days1, days2] = check();
+
+// if (date1 < obj){
+//     console.log(`${food1.name} is expired ${-days1} days ago`);
+// } else {
+//     console.log(`You have ${days1} days to use this product.`);
+// }
+
+// if (date2 < obj){
+//     console.log(`${food2.name} is expired ${-days2} days ago`);
+// } else {
+//     console.log(`You have ${days2} days to use this product.`);
+// }
